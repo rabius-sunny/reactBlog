@@ -34,8 +34,8 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar color="dark" dark expand="md" className="sticky-top">
-          <NavbarBrand href="/">Tech Talk</NavbarBrand>
+        <Navbar dark expand="md" className="sticky-top navBar">
+          <NavbarBrand href="/"> <span className="logo">T</span> Tech Talk</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="mr-auto" navbar>
@@ -47,7 +47,7 @@ function App() {
                   Category
               </DropdownToggle>
                 <DropdownMenu right>
-                  <Link to="/basic"> <DropdownItem> Basic Computing </DropdownItem></Link>
+                  <Link to="/basic"><DropdownItem>  Basic Computing </DropdownItem></Link>
                   <Link to="/system"> <DropdownItem> System </DropdownItem></Link>
                   <Link to="/web"> <DropdownItem> Web </DropdownItem></Link>
                 </DropdownMenu>
@@ -60,13 +60,13 @@ function App() {
               </NavItem>
             </Nav>
             <form className="d-flex">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{marginRight: '10px'}} />
+              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" style={{ marginRight: '10px' }} />
               <button className="btn btn-outline-light">Search</button>
             </form>
           </Collapse>
         </Navbar>
 
-        <div className="container">
+        {/* <div className="container"> */}
 
           <Switch>
             <Route path="/" exact>
@@ -88,7 +88,7 @@ function App() {
               <Create />
             </Route>
           </Switch>
-        </div>
+        {/* </div> */}
       </div>
     </Router>
   );

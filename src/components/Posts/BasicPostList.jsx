@@ -19,9 +19,16 @@ function BasicPostList() {
 
     return (
         <div>
-            <h1 className="text-center">Welcome To Basic</h1>
-            
-            <div className="row pt-3">{list ? list.map((post, index) => <div className="col-md-6">{<Post post={post} key={index} />}</div>) : ''}</div>
+            <div className="bg mt-1">
+                <div className="container">
+                    <h1 className="text-center bgt p-5"><span style={{ color: '#fff' }}> Welcome To</span> <span style={{ color: 'rgb(0 255 155)' }}> Basic</span></h1>
+                </div>
+            </div>
+            <div className="bgColor">
+                <div className="container">
+                    <div className="row pt-3">{list ? list.map((post, index) => <div className="col-md-6">{<Post post={post} key={index} />}</div>) : 'Loading...'}</div>
+                </div>
+            </div>
         </div>
     )
 }

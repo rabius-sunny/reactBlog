@@ -3,13 +3,20 @@ import '../App.css'
 import ReactHtmlParser from 'react-html-parser'
 
 function Post({ post }) {
-    let discription = post.discription
+    let description = post.discription
+    let task = post.task
     return (
         <div className="post">
             <h2>{post.title}</h2>
-            <small> {post.date} </small> <br/>
+            <div className="d-flex">
             <h6>{post.author}</h6>
-            <p> {ReactHtmlParser(discription)} </p>
+                <span className="dot">•</span>
+            <small> {post.date} </small>
+            </div>
+            <hr/>
+            <p> {ReactHtmlParser(description)} </p>
+            <h5 style={{textDecoration:'underline'}}> TODO :</h5>
+            <p className="task">{ReactHtmlParser(task)}</p>
         </div>
     )
 }

@@ -6,6 +6,7 @@ function Create() {
     const [title, setTitle] = useState('')
     const [date, setDate] = useState('')
     const [discription, setDiscription] = useState('')
+    const [task, setTask] = useState('')
     const [author, setAuthor] = useState('')
     const [cat, setCat] = useState('')
 
@@ -17,6 +18,9 @@ function Create() {
     }
     const handleDiscChange = e => {
         setDiscription(e.target.value)
+    }
+    const handleTaskChange = e => {
+        setTask(e.target.value)
     }
     const handleAuthorChange = e => {
         setAuthor(e.target.value)
@@ -31,7 +35,8 @@ function Create() {
             title,
             date,
             author,
-            discription
+            discription,
+            task
         }
         ref.push(post)
 
@@ -42,7 +47,8 @@ function Create() {
             title,
             date,
             author,
-            discription
+            discription,
+            task
         }
         ref.push(basic)
 
@@ -53,7 +59,8 @@ function Create() {
             title,
             date,
             author,
-            discription
+            discription,
+            task
         }
         ref.push(system)
 
@@ -64,7 +71,8 @@ function Create() {
             title,
             date,
             author,
-            discription
+            discription,
+            task
         }
         ref.push(web)
 
@@ -93,7 +101,11 @@ function Create() {
             <input type="text" className="form-control" placeholder="author" onChange={handleAuthorChange} />
             <input type="text" className="form-control" placeholder="category" onChange={handleCatChange} /> <br />
             <div class="form-floating">
-                <textarea class="form-control" placeholder="Discription" id="floatingTextarea" onChange={handleDiscChange}></textarea>
+                <textarea class="form-control" placeholder="discription" id="floatingTextarea" onChange={handleDiscChange}></textarea>
+                <label for="floatingTextarea"></label>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="task" id="floatingTextarea" onChange={handleTaskChange}></textarea>
                 <label for="floatingTextarea"></label>
             </div>
             <button className="btn btn-primary" onClick={postToDb}>Click</button>
