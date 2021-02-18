@@ -1,6 +1,6 @@
 import React from 'react'
 import '../App.css'
-import ReactHtmlParser, {processNodes, convertNodeToElement, htmlparser2} from 'react-html-parser'
+import ReactHtmlParser from 'react-html-parser'
 
 function Post({ post }) {
     let discription = post.discription
