@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import firebase from '../../firebase'
 import Post from '../Post'
-import bg from '../../iamges/bg.png'
 
 
 function HomePostList() {
