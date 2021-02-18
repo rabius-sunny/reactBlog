@@ -1,0 +1,60 @@
+@import url('https://fonts.maateen.me/kalpurush/font.css');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.post {
+    padding: 10px;
+}
+.post h2{
+    color: #0079f2;
+}
+.post small {
+    text-align: center;
+    padding: 0 15px;
+    color: rgb(124, 124, 124);
+    font-weight: bold;
+}
+.post h6{
+    background: rgba(0, 247, 255, 0.411);
+    width: 130px;
+    color: rgba(33, 90, 214, 0.856);
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+}
+.post p {
+    font-family: kalpurush;
+}
+.mainImg{
+    width: 100%;
+    height: 500px;
+}
+h1, h3{
+    color:#0079f2;
+}
+.nav-link{
+    padding-right: 2rem !important;
+}
+
+@media (min-width: 1305px) {
+    .width{
+    margin-left: 48%;
+    }
+}
+@media (max-width: 767px) {
+    a.nav-link:hover {
+        background: aqua;
+        color: #343a40 !important;
+        font-weight: 500;
+        transition: all 0.5s;
+        padding: 10px;
+    }
+    .mainImg {
+        height: 300px;
+    }
+}
+@media (max-width: 500px) {
+.mainImg {
+    height: 250px;
+}
+}
