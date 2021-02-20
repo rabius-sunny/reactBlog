@@ -29,18 +29,6 @@ function Create() {
         setCat(e.target.value)
     }
 
-    const createToHome = () => {
-        const ref = firebase.database().ref('post')
-        const post = {
-            title,
-            date,
-            author,
-            discription,
-            task
-        }
-        ref.push(post)
-
-    }
     const createToBasic = () => {
         const ref = firebase.database().ref('basic')
         const basic = {
@@ -80,10 +68,8 @@ function Create() {
 
     const postToDb = () => {
         let value = cat
-        if (value === 'home') {
-            createToHome()
-        }
-        else if (value === 'basic') {
+
+        if (value === 'basic') {
             createToBasic()
         }
         else if (value === 'system') {
@@ -95,20 +81,26 @@ function Create() {
     }
 
     return (
-        <div className="p-5">
-            <input type="text" className="form-control" placeholder="title" onChange={handleTitleChange} /> <br />
-            <input type="date" className="form-control" placeholder="date" onChange={handleDateChange} /> <br />
-            <input type="text" className="form-control" placeholder="author" onChange={handleAuthorChange} />
-            <input type="text" className="form-control" placeholder="category" onChange={handleCatChange} /> <br />
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="discription" id="floatingTextarea" onChange={handleDiscChange}></textarea>
-                <label for="floatingTextarea"></label>
+        <div className="myForm p-5">
+            <div className="color"></div>
+            <div className="dform">
+                <div className="inputBox">
+                    <input type="text" className="form-control" placeholder="title" onChange={handleTitleChange} /> <br />
+                    <input type="date" className="form-control" placeholder="date" onChange={handleDateChange} /> <br />
+                    <input type="text" className="form-control" placeholder="author" onChange={handleAuthorChange} />
+                    <br />
+                    <input type="text" className="form-control" placeholder="category" onChange={handleCatChange} /> <br />
+                    <div className="form-floating">
+                        <textarea className="form-control" placeholder="discription" id="floatingTextarea" onChange={handleDiscChange}></textarea>
+                        <label for="floatingTextarea"></label>
+                    </div>
+                    <div className="form-floating">
+                        <textarea className="form-control" placeholder="task" id="floatingTextarea" onChange={handleTaskChange}></textarea>
+                        <label for="floatingTextarea"></label>
+                    </div>
+                    <button className="myBtn" onClick={postToDb}>Post</button>
+                </div>
             </div>
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="task" id="floatingTextarea" onChange={handleTaskChange}></textarea>
-                <label for="floatingTextarea"></label>
-            </div>
-            <button className="btn btn-primary" onClick={postToDb}>Click</button>
         </div>
     )
 }

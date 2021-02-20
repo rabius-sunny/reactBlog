@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import firebase from '../../firebase'
+import Flash from 'react-reveal/Flash'
 import Post from '../Post'
 
 function BasicPostList() {
@@ -21,7 +22,7 @@ function BasicPostList() {
         <div>
             <div className="bg mt-1">
                 <div className="container">
-                    <h1 className="text-center bgt p-5"><span style={{ color: '#fff' }}> Welcome To</span> <span style={{ color: 'rgb(0 255 155)' }}> Basic</span></h1>
+                    <Flash><h1 className="text-center bgt p-5"><span style={{ color: '#fff' }}> Welcome To</span> <span style={{ color: 'rgb(0 255 155)' }}> Basic</span></h1></Flash>
                 </div>
             </div>
             <div className="bgColor">

@@ -107,6 +107,74 @@ h1{
     color: #fff;
     border-color: #fff;
 }
+
+.about{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.myForm{
+    overflow: hidden;
+    background: linear-gradient(to bottom, #f1f4f9, #dff1ff);
+}
+.color{
+    position: absolute;
+    filter: blur(150px);
+}
+
+.color{
+    bottom: 50px;
+    right: 100px;
+    width: 500px;
+    height: 500px;
+    background: #00d2ff;
+}
+
+.dform{
+    padding:10% 30%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 45px rgba(56, 56, 56, 0.144);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+input, textarea {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border: none !important;
+    outline: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 20px !important;
+}
+textarea::placeholder, input::placeholder{
+    color: #fff !important;
+}
+textarea:focus, input:focus {
+    border: 2px solid #65dce8 !important;
+}
+.myBtn{
+    width: 100%;
+    color:#4c949ba4;
+    cursor: pointer;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-right: 1px solid rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 20px;
+    padding: 7px 0;
+
+}
+.myBtn:hover{
+    background: #65dce8;
+    color: #fff;
+    transition: all 0.5s;
+}
 @media (min-width: 1305px) {
     .width{
     margin-left: 48%;
@@ -124,6 +192,9 @@ h1{
     .mainImg {
         height: 300px;
     }
+    .dform{
+        padding: 5% 10%;
+    }
 }
 @media (max-width: 500px) {
 .mainImg {
@@ -137,4 +208,12 @@ h1{
 .bg, .bgSystem {
     height: 250px;
 }
+.dform {
+    padding: 5% 10px;
+}
+}
+@media (min-width: 922px){
+    textarea::placeholder, input::placeholder{
+        color: #4c949ba4 !important;
+    }
 }
