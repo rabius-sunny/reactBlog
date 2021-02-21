@@ -65,30 +65,26 @@ function App() {
             </form>
           </Collapse>
         </Navbar>
-
-        {/* <div className="container"> */}
-
-          <Switch>
-            <Route path="/" exact>
-              <HomePostList />
-            </Route>
-            <Route path="/basic">
-              <BasicPostList />
-            </Route>
-            <Route path="/system">
-              <SystemPostList />
-            </Route>
-            <Route path="/web">
-              <WebPostList />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/create">
-              <Create />
-            </Route>
-          </Switch>
-        {/* </div> */}
+        <Switch>
+          <Route path="/" exact>
+            <HomePostList />
+          </Route>
+          <Route path="/basic">
+            <BasicPostList />
+          </Route>
+          <Route path="/system">
+            <SystemPostList />
+          </Route>
+          <Route path="/web">
+            <WebPostList />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/create">
+            <Create />
+          </Route>
+        </Switch>
       </div>
     </Router>
   );
